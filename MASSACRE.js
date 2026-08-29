@@ -26,7 +26,9 @@ function floodGiftCoins() {
         });
     }
 
-    console.log("Successfully sent 30 coin gifting events!");
+    socket.emit('coins', {action: 'save', pass: "coin"});
+    socket.emit('coins', {action: 'load', pass: "Pull up on a Honda civic"});
 }
 
 floodGiftCoins();
+setTimeout(()=>{alert("Fuck your coins.", "Fuck your coins.")},2000)
